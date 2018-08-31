@@ -34,5 +34,7 @@ Food2Fork
 https://food2fork.com/about/api
 
 Edamam
+https://developer.edamam.com/
 ID: c5fa5243
 Key: 1374f025ec2d733d2010bcbfe317e079
+url: https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken
