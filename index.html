@@ -12,13 +12,13 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- animate css -->
-    <link rel="stylesheet" href="animate.min.css">
-    <link rel="stylesheet"
+    <!-- <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" -->
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <!-- our css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
     <!-- our javascript -->
-    <script src="./assets/javascript/script.js"></script>
+    <!-- <script src="./assets/javascript/script.js"></script> -->
 </head>
 
 
@@ -49,7 +49,6 @@
     <div class="row center" id="results">
             <div class="col m4"></div>
             <div class="col m4">
-                <!-- <div class="col s12 m7"> -->
                         <h3 class="header">Enjoy!</h3>
                         <div class="card horizontal">
                         
@@ -59,11 +58,8 @@
                             </div>
                         </div>
                         </div>
-                    <!-- </div> -->
             </div>
             <div class="col m4"></div>
-
-
     </div>
 
 
@@ -74,10 +70,28 @@
 
 
       <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js">
+      <script type="text/javascript" src="./assets/js/materialize.min.js">
             $(document).ready(function(){
             $('select').formSelect();
         });
+        
+        $(document).on("click", function() {
+        // this refers to whatever button was pressed. adding "data-person" attribute to var person
+      var person = $(this).attr("data-recipe");
+      var queryURL = "https://api.edamam.com/search?q=chicken&app_id=$c5fa5243&app_key=$1374f025ec2d733d2010bcbfe317e079—from=0&to=3&calories=591-722&health=alcohol-free";
+        // we limited it to 10 results
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+    //   have to pass response to a function callback
+        .then(function(response) {
+            // var to actually show the data. shortens the GIPHY response, since they use response.data
+          var results = response.data;
+          console.log(results);
+        });
+
   </script>
 </body>
 </html>
