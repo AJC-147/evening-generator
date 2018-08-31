@@ -32,3 +32,7 @@ Key: Request Academic Plan
 
 Food2Fork
 https://food2fork.com/about/api
+
+Edamam
+ID: c5fa5243
+Key: 1374f025ec2d733d2010bcbfe317e079
