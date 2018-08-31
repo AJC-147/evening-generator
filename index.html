@@ -48,22 +48,23 @@
 
     <div class="row center" id="results">
             <div class="col m4"></div>
-            <div class="col m4">
-                        <h3 class="header">Enjoy!</h3>
-                        <div class="card horizontal">
-                        
+                <div class="col m4">
+                    <h4 class="header">Results</h4>
+                    <div class="card horizontal">
                         <div class="card-stacked">
                             <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                                <i class="medium material-icons">local_dining</i>
+                            <p id="foodResult">Food Result</p>
+                            <hr>
+                                <i class="medium material-icons">movie</i>
+                            <p id="foodResult">Movie Result</p>
                             </div>
                         </div>
-                        </div>
+                    </div>                    
+                <div class="col m4"></div>
             </div>
-            <div class="col m4"></div>
-    </div>
-
-
-
+        </div>
+    
     
 
 
@@ -78,8 +79,8 @@
         // $(document).on("click", function() {
         // this refers to whatever button was pressed. adding "data-person" attribute to var person
     //   var person = $(this).attr("data-recipe");
-      var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken&health=alcohol-free";
-      var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken";
+    //   var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=" + chicken;
+    //   var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken";
 
       $.ajax({
         url: queryURL,
