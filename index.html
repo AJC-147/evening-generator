@@ -14,7 +14,7 @@
     <!-- animate css -->
     <!-- <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" -->
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
     <!-- our css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
     <!-- our javascript -->
@@ -74,12 +74,12 @@
             $(document).ready(function(){
             $('select').formSelect();
         });
-        
-        $(document).on("click", function() {
+
+        // $(document).on("click", function() {
         // this refers to whatever button was pressed. adding "data-person" attribute to var person
-      var person = $(this).attr("data-recipe");
-      var queryURL = "https://api.edamam.com/search?q=chicken&app_id=$c5fa5243&app_key=$1374f025ec2d733d2010bcbfe317e079—from=0&to=3&calories=591-722&health=alcohol-free";
-        // we limited it to 10 results
+    //   var person = $(this).attr("data-recipe");
+      var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken&health=alcohol-free";
+      var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken";
 
       $.ajax({
         url: queryURL,
@@ -91,6 +91,7 @@
           var results = response.data;
           console.log(results);
         });
+        // });
 
   </script>
 </body>
