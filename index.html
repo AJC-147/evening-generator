@@ -31,17 +31,40 @@
             <h4 class="animated fadeIn delay-10s">What are you craving tonight?</h4>
     </div>
 
-    <div class="row center" id="results">
-        <label>Browser Select</label>
-            <select class="browser-default">
+    <div class="row center" id="selectionDiv">
+        <div class="col m4"></div>
+        <div class="col m4">
+            <select class="browser-default animated fadeIn delay-10s">
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Italian</option>
                 <option value="2">Chinese</option>
                 <option value="3">French</option>
+                <option value="3">American</option>
+                <option value="4">Ethiopian</option>
             </select>
+        </div>
+        <div class="col m4"></div>
     </div>
 
-    
+    <div class="row center" id="results">
+            <div class="col m4"></div>
+            <div class="col m4">
+                <!-- <div class="col s12 m7"> -->
+                        <h3 class="header">Enjoy!</h3>
+                        <div class="card horizontal">
+                        
+                        <div class="card-stacked">
+                            <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            </div>
+                        </div>
+                        </div>
+                    <!-- </div> -->
+            </div>
+            <div class="col m4"></div>
+
+
+    </div>
 
 
 
@@ -52,8 +75,9 @@
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js">
-      $(document).ready(function(){
-    $('select').formSelect();
-  });</script>
+            $(document).ready(function(){
+            $('select').formSelect();
+        });
+  </script>
 </body>
 </html>
