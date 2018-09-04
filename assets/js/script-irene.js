@@ -31,45 +31,26 @@ $(document).ready(function() {
             });
             resultDiv.append(recipeLink);
 
-
-            // function mealId() {
-            //     var recipe = response.meals[0].idMeal;
-                // var queryURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipe;
-            //     var recipeText = $("<p>").text(recipe);
-            //     resultDiv.append(recipeText);
-            // }
-
-            // var recipe = function() {
-            //     var recipeId = response.meals[0].idMeal;
-            //     var recipeURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipeId;
-            //     // console.log(recipe);
-            //     $.ajax({
-            //         url: queryURL,
-            //         method: "GET"
-            //     }).then(function(response) {
-            //         // console.log(response);
-            //     })
-            // };
-
-            // var recipeText = recipe;
-            // resultDiv.append(recipeText);
-
-
-            // function mealId() {
-            //     var recipe = response.meals[0].idMeal;
-            //     var recipeURL = $("<a />", {
-            //         // name : "link",
-                    // href : "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipe,
-            //         text : "Recipe"
-            //     });
-            //     console.log(recipe);
-            // }
-
-            // var recipeName = mealId;
-            // resultDiv.append(recipeName);
-
             $("#foodResult").append(resultDiv);
+        });
+
+        
+        var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out"];
+        var queryURL = movieArray[Math.floor(Math.random()*movieArray.length)];
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(movieSelection) {
+           $("#movieResult").empty();
+
+           var movieDiv = $("<div class='movie'>");
+
+           $("#movieResult").append(movieDiv);
         })
+
+
+        
 
 
 
@@ -77,6 +58,6 @@ $(document).ready(function() {
 
 
 
-})
+});
 
 
