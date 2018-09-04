@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+}
+
+#results {
+    /* width: 400px; */
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    opacity: 0.85;
+    border-radius: 5px;
+}
+
+img {
+    width: 300px;
+    margin: 0 auto;
+
+}
+

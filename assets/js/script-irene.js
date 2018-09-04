@@ -1,51 +1,82 @@
-// var queryURL = "https://api.edamam.com/search?app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=chicken";
+$(document).ready(function() {
 
-// var movies = $("#dropDown option:selected").text();
+    $("#submit").click(function() {
+        var selection = $("#dropDown option:selected").text();
+        var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?a=" + selection;
+        console.log(selection);
 
-// $(document).ready(function() {
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+            $("#foodResult").empty();
 
-function findMovie(movie) {
-    var queryUrl = "https://www.omdbapi.com/?apikey=d9666985&t=scarface";
-    console.log(queryURL);
+            var resultDiv = $("<div class='foodResult'>");
 
-    // $.ajax({
-    //     url: queryURL,
-    //     method: "GET"
-    // }).then(function(response) {
-    //     console.log(response);
-    // });
-};
-// });
+            var imgURL = response.meals[0].strMealThumb;
+            var image = $("<img>").attr("src", imgURL);
+            resultDiv.prepend(image);
 
-// $(document).ready(function() {
+            var name = response.meals[0].strMeal;
+            var foodName = $("<p>").text(name);
+            resultDiv.append(foodName);
 
-//     // on click submit button
-//     $("#submit").click(function() {
-
-//         // submit button retrieves #dropDown option:selected
-//         $("#dropDown option:selected").text();
-//         // alert($("#dropDown option:selected").text());
-
-//         var selection = $(this).attr("data-select");
-//         var queryUrl = "http://www.omdbapi.com/?apikey=d9666985&t=" + selection;
-
-//         $.ajax({
-//             url: queryURL,
-//             method: "GET"
-//         }).then(function(response) {
-//             )};
-//         console.log(response);
-
-//     })
-// });
-
-    
+            // console.log(recipeId);
+            var recipeId = response.meals[0].idMeal;
+            var recipeLink = $("<a />", {
+                name : "link",
+                href : "https://www.themealdb.com/meal.php?c=" + recipeId,
+                text : "Recipe"
+            });
+            resultDiv.append(recipeLink);
 
 
-// $(function() {
-//     $('#interstellar').change(function() {
-//         this.form.submit();
-//     });
-// });
+            // function mealId() {
+            //     var recipe = response.meals[0].idMeal;
+                // var queryURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipe;
+            //     var recipeText = $("<p>").text(recipe);
+            //     resultDiv.append(recipeText);
+            // }
+
+            // var recipe = function() {
+            //     var recipeId = response.meals[0].idMeal;
+            //     var recipeURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipeId;
+            //     // console.log(recipe);
+            //     $.ajax({
+            //         url: queryURL,
+            //         method: "GET"
+            //     }).then(function(response) {
+            //         // console.log(response);
+            //     })
+            // };
+
+            // var recipeText = recipe;
+            // resultDiv.append(recipeText);
+
+
+            // function mealId() {
+            //     var recipe = response.meals[0].idMeal;
+            //     var recipeURL = $("<a />", {
+            //         // name : "link",
+                    // href : "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + recipe,
+            //         text : "Recipe"
+            //     });
+            //     console.log(recipe);
+            // }
+
+            // var recipeName = mealId;
+            // resultDiv.append(recipeName);
+
+            $("#foodResult").append(resultDiv);
+        })
+
+
+
+    })
+
+
+
+})
 
 
