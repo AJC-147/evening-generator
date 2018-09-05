@@ -17,7 +17,7 @@ https://www.themoviedb.org/documentation/api
 
 Reelgood
 https://reelgood.com/
-Key: email api@reelgood.com
+Key: email api@reelgood.com /*emailed
 
 Utelly
 https://market.mashape.com/utelly/utelly
