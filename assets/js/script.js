@@ -40,7 +40,7 @@ $(document).ready(function() {
         });
 
         
-        var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire"];
+        var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire", "The Notebook"];
         var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
 
         $.ajax({
