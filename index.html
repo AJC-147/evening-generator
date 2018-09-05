@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
@@ -20,31 +22,52 @@
 </head>
 
 
-<body background="./assets/images/background_spoons1.jpg">
+<!--<body background="./assets/images/background_spoons1.jpg">-->
+    <body>
 
     <!-- header -->
     <div class="row center animated fadeIn delay-10s" id="header">
-            <h3 class="black-text">Evening Generator</h3>
+            <h1 class="head1">evening</h1><h1 class="head2">generator</h1>
             <i class="medium material-icons">local_dining</i>
             <i class="medium material-icons">movie</i>
-            <h4 >What are you craving tonight?</h4>
+            <h4>What are you craving tonight?</h4>
     </div>
 
     <!-- dropdown section -->
     <div class="row center animated fadeIn delay-10s" id="selectionDiv">
         <div class="col m4"></div>
+        
         <div class="col m4">
-            <select class="browser-default" id="dropDown">
-                <option value="" disabled selected>Choose your option</option>
+           
+           
+            <select class="browser-default" id="foodGenre">
+                <option value="" disabled selected>Choose your food genre</option>
                 <option value="1" id="italian">Italian</option>
                 <option value="2" id="chinese">Chinese</option>
                 <option value="3" id="french">French</option>
                 <option value="4" id="american">American</option>
                 <option value="5" id="indian">Indian</option>
             </select>
+            
+            <select class="browser-default" id="ingredientNumb">
+                <option value="" disabled selected>Pick your ingredient limit</option>
+                <option value="1" id="4">4</option>
+                <option value="2" id="5">5</option>
+                <option value="3" id="6">6</option>
+                <option value="4" id="7">7</option>
+                <option value="5" id="8">8</option>
+            </select>
+<!--
+
+           <a class="waves-effect waves-light btn" attr="4" id="ingredientNumb" value="4">4</a>
+-->
+
             <button class="btn waves-effect black text-white submit" type="submit" name="action" id="submit">Submit
                 <i class="material-icons right">send</i>
             </button>
+            
+            
+            
         </div>
         <div class="col m4"></div>
     </div>
@@ -54,7 +77,7 @@
             <div class="col m4"></div>
             <div class="col m4 animated fadeIn delay-10s" id="results">
                 <i class="medium material-icons">local_dining</i>
-                    <div class="zoom" id="foodResult"></div>
+                    <div class="zoom" id="recipe"></div>
                         <br>
                         <hr>
                         <br>
@@ -64,8 +87,11 @@
         <div class="col m4"></div>
     </div>
 
-
-
+<!--
+<div id="container">
+  <div id="triangle-topleft"></div>
+</div>
+-->
 
 
     <!-- javascript -->
@@ -74,6 +100,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
+<!--    <script src="./assets/js/fandango.js"></script>-->
     
 </body>
 </html>

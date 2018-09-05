@@ -7,10 +7,7 @@ Key: bfpc3rcxzyewprt4ttjugvwb
 OMDb
 http://www.omdbapi.com/
 Key: trilogy
-
-IMDb
-http://imdbapi.net/
-Key: 
+/*no genre parameters
 
 TMDb
 https://www.themoviedb.org/documentation/api
@@ -32,6 +29,7 @@ Key: Request Academic Plan
 
 Food2Fork
 https://food2fork.com/about/api
+Key: f3f77bc2ec50f374340084669142b1f1
 
 Edamam
 ID: c5fa5243
