@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $("#submit").click(function() {
+
         var keyword = $("#foodGenre option:selected").text();
         var ingredientNum = $("#ingredientNumb option:selected").text();
         var queryURL = "https://api.edamam.com/search?&app_id=c5fa5243&app_key=1374f025ec2d733d2010bcbfe317e079&q=" + keyword + "&ingr=" + ingredientNum;
@@ -50,8 +51,10 @@ $(document).ready(function() {
                 text : "Instructions at " + source,
                 target : "_blank"
             });
+
             console.log(recipeURL);
             console.log(recipeLink);
+
 
             resultDiv.prepend(image);
             $(image).wrap("<a href=" + recipeURL +" target='_blank'></a>");
@@ -93,6 +96,8 @@ $(document).ready(function() {
             var plot = movieSuggestion.Plot;
             var plotText = $("<p>").text(plot);
             movieDiv.append(plotText);
+           $("#movieResult").append(movieDiv);
+        });
 
             var year = movieSuggestion.Year;
             var yearText = $("<p>").text(year);
