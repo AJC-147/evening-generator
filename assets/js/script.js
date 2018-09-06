@@ -91,13 +91,11 @@ $(document).ready(function() {
             var titleText = $("<p>").text(movieTitle);
             movieDiv.append(titleText);
 
-            // var plot = movieSuggestion.Plot;
-            // var plotText = $("<p>").text(plot);
-            // movieDiv.append(plotText);
 
             var year = movieSuggestion.Year;
             var yearText = $("<p>").text(year);
             movieDiv.append(yearText);
+
 
             var imdb = movieSuggestion.imdbID;
             // console.log(imdb);
@@ -110,7 +108,7 @@ $(document).ready(function() {
             })
             movieDiv.append(imdbText);
 
-            https://www.imdb.com/title/" + imdb + "/plotsummary?ref_=tt_ql_stry_2"
+
 
             $("#movieResult").append(movieDiv);
         });
