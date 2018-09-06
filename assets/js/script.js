@@ -86,7 +86,7 @@ $(document).ready(function() {
             var plotLink = $("<a />", {
                 name : "link",
                 href : plotURL,
-                text : "Plot at IMDB",
+                text : "Plot from IMDB",
                 target : "_blank"
             });
             console.log(plotSource);
