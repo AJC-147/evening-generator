@@ -29,13 +29,6 @@ $(document).ready(function() {
             var imgURL = randomRecipe.recipe.image;
             var image = $("<img>").attr("src", imgURL);
             console.log(image);
-            
-            // var imgURL = randomRecipe.recipe.image;
-            // var image = $("<img>").attr({
-            //     src: imgURL,
-            //     addClass: "zoom",
-            // });
-            // console.log(image);
 
             var ingred = randomRecipe.recipe.ingredientLines;
             var ingredients = $("<p>").text(ingred);
@@ -85,7 +78,23 @@ $(document).ready(function() {
 
             var imgURL = movieSuggestion.Poster;
             var image = $("<img>").attr("src", imgURL);
+            // movieDiv.prepend(image);
+
+            // test
+            var plotSource = movieSuggestion.imdbID;
+            var plotURL = "https://www.imdb.com/title/" + plotSource + "/plotsummary?ref_=tt_ql_stry_2";
+            var plotLink = $("<a />", {
+                name : "link",
+                href : plotURL,
+                text : "Plot at IMDB",
+                target : "_blank"
+            });
+            console.log(plotSource);
+            console.log(plotURL);
             movieDiv.prepend(image);
+            $(image).wrap("<a href=" + plotURL +" target='_blank'></a>");
+            movieDiv.append(plotLink);
+            
 
             var movieTitle = movieSuggestion.Title;
             var titleText = $("<p>").text(movieTitle);
@@ -96,18 +105,17 @@ $(document).ready(function() {
             var yearText = $("<p>").text(year);
             movieDiv.append(yearText);
 
-
-            var imdb = movieSuggestion.imdbID;
-            // console.log(imdb);
-            var imdbURL = "https://www.imdb.com/title/" + imdb + "/plotsummary?ref_=tt_ql_stry_2";
-            var imdbText = $("<a />", {
-                name : "link",
-                href : imdbURL,
-                text : "Learn more at IMDB",
-                target : "_blank"
-            })
-            movieDiv.append(imdbText);
-
+            // working
+            // var imdb = movieSuggestion.imdbID;
+            // // console.log(imdb);
+            // var imdbURL = "https://www.imdb.com/title/" + imdb + "/plotsummary?ref_=tt_ql_stry_2";
+            // var imdbText = $("<a />", {
+            //     name : "link",
+            //     href : imdbURL,
+            //     text : "Learn more at IMDB",
+            //     target : "_blank"
+            // })
+            // movieDiv.append(imdbText);
 
 
             $("#movieResult").append(movieDiv);
