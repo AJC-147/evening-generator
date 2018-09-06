@@ -2,25 +2,46 @@ h1 {
     font-family: 'Work Sans', sans-serif;
     color: #fff;
     filter: drop-shadow(1px 5px 10px #000000ab);
-    padding-top: 150px;
+    padding-top: 75px;
+    font-size: 6.2em;
+-webkit-transition: padding-top, font-size .5s;
+   -moz-transition: padding-top, font-size .5s;
+     -o-transition: padding-top, font-size .5s;
+        transition: padding-top, font-size .5s;
+}
+
+@media only screen and (max-width: 1705px) {
+    h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    filter: drop-shadow(1px 5px 10px #000000ab);
+    padding-top: 125px;
+    font-size: 4.2em;
     
 /*
     background: black;
     padding-bottom: 5px;
 */
 }
+}
 
 body {
     margin: 0 auto;
-    background-color: pink;
-    background-image: url("../images/ITALIAN-INGREDIENTS-1.jpg");
+/*    background-color: #26a69a;*/
+    background: url(../images/ITALIAN-INGREDIENTS-1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+/*    height: 500px;*/
 /*    background-position: center;*/
     position: relative;
 /*    overflow: hidden;*/
+    background-color: rgb(136, 180, 194);
 }
+
 
 /*
 body:before {
@@ -32,14 +53,58 @@ body:before {
     background-color: rgb(255, 255, 255); 
     background-color: rgba(255, 255, 255, 0.5);
     top: 0;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    
+        margin: 0 auto;
+    background: url(../images/empty-movie-theater.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1064.1px;
+    
+    background-position: center;
+    position: relative;
 }
 */
 
-span#head2 {
+/*
+#secondBackground {
+    margin: 0 auto;
+    background: url(../images/empty-movie-theater.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1064.1px;
+    background-position: center;
     position: relative;
+    
+}
+*/
+
+div#header {
+    padding-top: 60px;
+/*
+    position: absolute;
+    top: 60px;
+    left: 30%;
+    right: 30%;
+*/
+}
+
+span#head1 {
+    animation-delay: 1s;
+}
+
+span#head2 {
+/*    position: relative;*/
 /*
     bottom: 8px;
     right: 30px;
@@ -55,7 +120,13 @@ span#head2 {
     right: 29px;
 */
     
+/*
     right: 35px;
+*/
+    animation-delay: 2s;
+}
+
+span#head3 {
 }
 
 .zoom {
@@ -93,8 +164,10 @@ img {
     margin: 0 auto;
 }
 
-div#header {
-    padding-top: 60px;
+
+#movieParaCol, #foodParaCol {
+    background-image: url(../images/qbkls.png);
+    filter: drop-shadow(1px 5px 10px #000000ab);
 }
 
 div#results {

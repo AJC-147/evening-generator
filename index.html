@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,10 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
-    
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css" media="screen,projection" />
+
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
@@ -19,20 +20,158 @@
 
 </head>
 
-    <body>
+<body>
+<!--
+    <div class="row" id="secondBG">
+        <div class="col m12" id="secondBackground">
+-->
 
-
-    <div class="row center animated fadeIn delay-10s" id="header">
-            <h1 class="title"><span id="head1">evening</span><span id="head2">generator</span></h1>
+    <div class="row" id="headerRow">
+        <div class="col s12">
+            <div class="row center animated fadeIn delay-10s" id="header">
+                <h1 class="title"><span class="animated fadeIn" id="head1">evenin</span><span id="head3">g</span><span class="animated fadeIn" id="head2">enerator</span></h1>
+            </div>
+        </div>
     </div>
 
-    <!-- dropdown section -->
+    <div class="row" id="parametersRow">
+       <div class="col s1 m1 l1"></div>
+       
+        <div class="col s11 m4 l4" id="movieParaCol">
+        
+            <div class="col s12 m6 l12" id="">
+            <input type="text" id="foodKeyword">
+<!--(*Required?)-->
+            </div>
+            
+            <div class="col s4 m6 l4" id="">
+            <form id="ingredientNumber">
+    <p>
+        <label>
+        <input name="ingredientNumber" id="4" value="4" type="radio" checked />
+        <span>4</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>5</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>6</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>7</span>
+      </label>
+    </p>
+           </form>
+            </div>
+            
+            <div class="col s4 m6 l4" id="">
+            <form>
+    <p>
+        <label>
+        <input name="group1" type="radio" checked />
+        <span>5-15</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>16-25</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>26-35</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>36-45</span>
+      </label>
+    </p>
+           </form>
+            </div>
+            
+            <div class="col s4 m6 l4" id="">
+            <form>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>Nuts</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>Soy</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>Fish</span>
+      </label>
+    </p>
+    <p>
+        <label>
+        <input name="group1" type="radio" />
+        <span>Shellfish</span>
+      </label>
+    </p>
+           </form>
+            </div>
+        </div>
+        
+        <div class="col s0 m2 l2"></div>
+        
+        <div class="col s11 m4 l4" id="foodParaCol">
+        
+            <div class="col s12 m6 l3" id="">
+
+            </div>
+            
+            <div class="col s12 m6 l3" id="">
+            </div>
+            
+            <div class="col s12 m6 l3" id="">
+            </div>
+            
+            <div class="col s12 m6 l3" id="">
+            </div>
+
+        </div>
+        <div class="col s1 m1 l1"></div>
+    </div>
+
+    <div class="row" id="resultsRow">
+        <div class="col s12 m6 l5" id="movieResultCol">
+
+        </div>
+        <div class="col s1 m0 l2">
+        </div>
+        <div class="col s12 m6 l5" id="foodResultCol">
+
+        </div>
+    </div>
+
+<!--Delete Below-->
+
     <div class="row center animated fadeIn delay-10s" id="selectionDiv">
         <div class="col m4"></div>
-        
+
         <div class="col m4">
-           
-           
+
+
             <select class="browser-default" id="foodGenre">
                 <option value="" disabled selected>Choose your food genre</option>
                 <option value="1" id="italian">Italian</option>
@@ -41,7 +180,7 @@
                 <option value="4" id="american">American</option>
                 <option value="5" id="indian">Indian</option>
             </select>
-            
+
             <select class="browser-default" id="ingredientNumb">
                 <option value="" disabled selected>Pick your ingredient limit</option>
                 <option value="1" id="4">4</option>
@@ -50,7 +189,7 @@
                 <option value="4" id="7">7</option>
                 <option value="5" id="8">8</option>
             </select>
-<!--
+            <!--
 
            <a class="waves-effect waves-light btn" attr="4" id="ingredientNumb" value="4">4</a>
 -->
@@ -58,29 +197,29 @@
             <button class="btn waves-effect black text-white submit" type="submit" name="action" id="submit">Submit
                 <i class="material-icons right">send</i>
             </button>
-            
-            
-            
+
+
+
         </div>
         <div class="col m4"></div>
     </div>
 
     <!-- results area -->
     <div class="row center">
-            <div class="col m4"></div>
-            <div class="col m4 animated fadeIn delay-10s" id="results">
-                <i class="medium material-icons">local_dining</i>
-                    <div class="zoom" id="recipe"></div>
-                        <br>
-                        <hr>
-                        <br>
-                <i class="medium material-icons">movie</i>
-                    <div id="movieResult"></div>
-            </div>
+        <div class="col m4"></div>
+        <div class="col m4 animated fadeIn delay-10s" id="results">
+            <i class="medium material-icons">local_dining</i>
+            <div class="zoom" id="recipe"></div>
+            <br>
+            <hr>
+            <br>
+            <i class="medium material-icons">movie</i>
+            <div id="movieResult"></div>
+        </div>
         <div class="col m4"></div>
     </div>
 
-<!--
+    <!--
 <div id="container">
   <div id="triangle-topleft"></div>
 </div>
@@ -88,12 +227,16 @@
 
 
     <!-- javascript -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
-<!--    <script src="./assets/js/fandango.js"></script>-->
+    <!--    <script src="./assets/js/fandango.js"></script>-->
     
+    
+
+<!--
+</div>
+</div>
+-->
 </body>
+
 </html>
