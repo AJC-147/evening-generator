@@ -86,13 +86,14 @@ $(document).ready(function() {
             var imgURL = movieSuggestion.Poster;
             var image = $("<img>").attr("src", imgURL);
             movieDiv.prepend(image);
-            // $(image).wrap("<a href=" +  "https://www.imdb.com/title/" + imdb + "/plotsummary?ref_=tt_ql_stry_2", target='_blank'></a>");
-            // movieDiv.append(recipeLink);
 
+            var movieTitle = movieSuggestion.Title;
+            var titleText = $("<p>").text(movieTitle);
+            movieDiv.append(titleText);
 
-            var plot = movieSuggestion.Plot;
-            var plotText = $("<p>").text(plot);
-            movieDiv.append(plotText);
+            // var plot = movieSuggestion.Plot;
+            // var plotText = $("<p>").text(plot);
+            // movieDiv.append(plotText);
 
             var year = movieSuggestion.Year;
             var yearText = $("<p>").text(year);
