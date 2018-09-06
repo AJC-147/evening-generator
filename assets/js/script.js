@@ -30,6 +30,13 @@ $(document).ready(function() {
             var image = $("<img>").attr("src", imgURL);
             console.log(image);
             
+            // var imgURL = randomRecipe.recipe.image;
+            // var image = $("<img>").attr({
+            //     src: imgURL,
+            //     addClass: "zoom",
+            // });
+            // console.log(image);
+
             var ingred = randomRecipe.recipe.ingredientLines;
             var ingredients = $("<p>").text(ingred);
             resultDiv.append(ingredients);
