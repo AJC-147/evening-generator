@@ -98,7 +98,8 @@ img {
 }
 
 div#header {
-    padding-top: 60px;
+    /* padding-top: 30px; */
+    top: 0;
 }
 
 div#results {

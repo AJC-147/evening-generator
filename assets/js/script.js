@@ -35,7 +35,7 @@ $(document).ready(function() {
             resultDiv.append(ingredients);
             console.log(ingredients);
 
-var source = randomRecipe.recipe.source;
+            var source = randomRecipe.recipe.source;
             var recipeURL = randomRecipe.recipe.url;
             var recipeLink = $("<a />", {
                 name : "link",
@@ -93,27 +93,63 @@ var source = randomRecipe.recipe.source;
 //        });
 
         
-        var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire"];
-        var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
+        // var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire"];
+        // var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
+
+        // $.ajax({
+        //     url: "https://www.omdbapi.com/?apikey=d9666985&t=" + randomMovie,
+        //     method: "GET"
+        // }).then(function(response) {
+        //    $("#movieResult").empty();
+
+        //    var movieDiv = $("<div class='movie'>");
+
+        //     var imgURL = response.Poster;
+        //     var image = $("<img>").attr("src", imgURL);
+        //     movieDiv.prepend(image);
+
+
+        //    $("#movieResult").append(movieDiv);
+        // });
+
+
+        // DYNAMIC MOVIE CODE
+        var selectedCuisine = [$("#foodGenre option:selected").text()];
+        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&s=" + selectedCuisine;
+        console.log(queryURL);
+
 
         $.ajax({
-            url: "https://www.omdbapi.com/?apikey=d9666985&t=" + randomMovie,
+            url: queryURL,
             method: "GET"
         }).then(function(response) {
-           $("#movieResult").empty();
+            console.log(response);
+            $("#movieResult").empty();
 
-           var movieDiv = $("<div class='movie'>");
+            var result = response.Search.slice(0, 5);
+            console.log(result);
 
-            var imgURL = response.Poster;
+            var movieDiv = $("<div class='movie'>");
+
+            var movieSuggestion = result[Math.floor(Math.random()*result.length)];
+            console.log(movieSuggestion);
+            movieDiv.append(movieSuggestion);
+
+            var imgURL = movieSuggestion.Poster;
             var image = $("<img>").attr("src", imgURL);
             movieDiv.prepend(image);
 
+            var title = movieSuggestion.Title;
+            var titleText = $("<p>").text(title);
+            movieDiv.append(titleText);
 
-           $("#movieResult").append(movieDiv);
+            var plot = movieSuggestion.Plot;
+            var plotText = $("<p>").text(plot);
+            movieDiv.append(plotText);
+
+
+            $("#movieResult").append(movieDiv);
         });
-
-
-        
 
 
 
