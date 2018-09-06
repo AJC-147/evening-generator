@@ -1,7 +1,66 @@
-body {
-    margin: 0 auto;
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    filter: drop-shadow(1px 5px 10px #000000ab);
+    padding-top: 150px;
+    
+/*
+    background: black;
+    padding-bottom: 5px;
+*/
 }
 
+h4, h5, h6, p, form, select, button {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url("../images/ITALIAN-INGREDIENTS-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+/*    background-position: center;*/
+    position: relative;
+/*    overflow: hidden;*/
+}
+
+/*
+body:before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    width: 100%; 
+    height: 200%; 
+    background-color: rgb(255, 255, 255); 
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+*/
+
+span#head2 {
+    position: relative;
+/*
+    bottom: 8px;
+    right: 30px;
+*/
+    
+/*
+    bottom: 6px;
+    right: 26px;
+*/
+    
+/*
+    bottom: 5px;
+    right: 29px;
+*/
+    
+    right: 35px;
+}
 
 .zoom {
     /* padding-bottom: 50px; */
@@ -38,4 +97,31 @@ img {
     /* width: 300px; */
     margin: 0 auto;
     height: 300px;
+}
+
+div#header {
+    padding-top: 60px;
+}
+
+div#results {
+    background-image: url(../images/qbkls.png);
+    filter: drop-shadow(1px 5px 10px #000000ab);
+}
+
+select {
+    margin: 5px;
+}
+
+#container {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+}
+
+#triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 100px solid gray;
+  border-right: 100px solid transparent;
 }
