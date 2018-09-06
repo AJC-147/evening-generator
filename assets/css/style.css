@@ -16,7 +16,7 @@ h4, h5, h6, p, form, select, button {
 
 body {
     margin: 0 auto;
-    background-color: pink;
+    background-color: rgb(136, 180, 194);
     background-image: url("../images/ITALIAN-INGREDIENTS-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
