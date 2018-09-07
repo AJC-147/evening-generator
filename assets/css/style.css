@@ -84,7 +84,7 @@ h1 {
     transition: padding-top, font-size .5s;
 }
 
-@media only screen and (max-width: 1705px) {
+@media only screen and (min-device-width : 480px) and (max-device-width : 1705px) {
     h1 {
         font-family: 'Work Sans', sans-serif;
         color: #fff;
@@ -99,7 +99,55 @@ h1 {
     }
 }
 
+@media only screen and (max-width: 479px) {
+    h1 {
+        font-family: 'Work Sans', sans-serif;
+        color: #fff;
+        filter: drop-shadow(1px 5px 10px #000000ab);
+        padding-top: 0px;
+        font-size: 3.2em;
+
+        /*
+    background: black;
+    padding-bottom: 5px;
+*/
+    }
+    
+    .btn-floating.btn-large {
+
+    height: 75px !important;
+    width: 75px !important;
+    right: 105px !important;
+    bottom: 250px !important;
+    }
+    
+    .btn-large i {
+    font-size: 3rem !important;
+}
+    
+    .btn-floating.btn-large i {
+    line-height: 75px !important;
+    filter: drop-shadow(1px 2px 1px #000000ab);
+}
+    row{    
+    margin-bottom: 0px !important;
+    }
+    
+    div#movieParaCol {
+    position: relative;
+    right: 4%;
+}
+    
+    div#foodParaCol {
+    position: relative;
+    top: 10px;
+    right: 4%;
+}
+}
+
 h2 {font-family: 'Work Sans', sans-serif;}
+
+h5 {text-align: center;}
 
 h3,
 h4,
@@ -221,9 +269,11 @@ form#ingredient {
     top: 5px;
 }
 
+/*
 #recipeH5 {
     margin-left: 10px;
 }
+*/
 
 #keyword {
     margin-bottom: 0px;
