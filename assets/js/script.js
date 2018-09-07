@@ -1,6 +1,50 @@
 $(document).ready(function () {
 
     $("#submit").click(function () {
+        
+
+    var x = document.getElementById("movieResultCol");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "block";
+    }
+        
+    var y = document.getElementById("foodResultCol");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "block";
+    }
+        
+//    var a = document.getElementById("movieParaCol");
+//    if (a.style.display === "inherit") {
+//        a.style.display = "none";
+//    } else {
+//        a.style.display = "inherit";
+//    }
+//        
+//    var b = document.getElementById("foodParaCol");
+//    if (b.style.display === "inherit") {
+//        b.style.display = "none";
+//    } else {
+//        b.style.display = "inherit";
+//    }
+        
+//        var a = document.getElementByClass("slideOutRight");
+//    if (a.style.animation-delay === "100s") {
+//        a.style.animation-delay = "1s";
+//    } else {
+//        a.style.animation-delay = "1s";
+//    }
+//        
+//        var b = document.getElementByClass("slideOutLeft");
+//    if (b.style.animation-delay === "100s") {
+//        b.style.animation-delay = "1s";
+//    } else {
+//        b.style.animation-delay = "1s";
+//    }
+
 
         var keyword = $("#foodKeyword").val().trim();
         var ingredientNum = $("#ingredientNumber input:checked").val();
