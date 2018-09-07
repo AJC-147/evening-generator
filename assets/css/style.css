@@ -1,10 +1,12 @@
 /**********************/
+
 /*Basic Custom Styling*/
+
 /**********************/
 
 body {
     margin: 0 auto;
-/*    background-color: #26a69a;*/
+    /*    background-color: #26a69a;*/
     background: url(../images/split1.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -12,10 +14,10 @@ body {
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-/*    height: 500px;*/
-/*    background-position: center;*/
+    /*    height: 500px;*/
+    /*    background-position: center;*/
     position: relative;
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
     background-color: rgb(136, 180, 194);
 }
 
@@ -72,31 +74,40 @@ h1 {
     filter: drop-shadow(1px 5px 10px #000000ab);
     padding-top: 75px;
     font-size: 6.2em;
--webkit-transition: padding-top, font-size .5s;
-   -moz-transition: padding-top, font-size .5s;
-     -o-transition: padding-top, font-size .5s;
-        transition: padding-top, font-size .5s;
+    -webkit-transition: padding-top, font-size .5s;
+    -moz-transition: padding-top, font-size .5s;
+    -o-transition: padding-top, font-size .5s;
+    transition: padding-top, font-size .5s;
 }
 
 @media only screen and (max-width: 1705px) {
     h1 {
-    font-family: 'Work Sans', sans-serif;
-    color: #fff;
-    filter: drop-shadow(1px 5px 10px #000000ab);
-    padding-top: 125px;
-    font-size: 4.2em;
-    
-/*
+        font-family: 'Work Sans', sans-serif;
+        color: #fff;
+        filter: drop-shadow(1px 5px 10px #000000ab);
+        padding-top: 125px;
+        font-size: 4.2em;
+
+        /*
     background: black;
     padding-bottom: 5px;
 */
-}
+    }
 }
 
-h2 {}
+h2 {font-family: 'Work Sans', sans-serif;}
 
-h3, h4, h5, h6, p, button, input, optgroup, select, textarea {
-    font-family: 'Sawarabi Mincho', sans-serif;
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: 'Work Sans', sans-serif;
 }
 
 a {}
@@ -104,6 +115,11 @@ a {}
 img {
     width: 300px;
     margin: 0 auto;
+}
+
+hr {
+        border-bottom: 1px solid #9e9e9e;
+    margin-top: 20px;
 }
 
 form {}
@@ -116,7 +132,9 @@ select {
 
 
 /*************************/
+
 /*Advanced Custom Styling*/
+
 /*************************/
 
 #null {
@@ -124,15 +142,15 @@ select {
 }
 
 #container {
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
 }
 
 div#header {
     padding-top: 60px;
-/*
+    /*
     position: absolute;
     top: 60px;
     left: 30%;
@@ -145,23 +163,20 @@ span#head1 {
 }
 
 span#head2 {
-/*    position: relative;*/
-/*
+    /*    position: relative;*/
+    /*
     bottom: 8px;
     right: 30px;
 */
-    
-/*
+    /*
     bottom: 6px;
     right: 26px;
 */
-    
-/*
+    /*
     bottom: 5px;
     right: 29px;
 */
-    
-/*
+    /*
     right: 35px;
 */
     animation-delay: 2s;
@@ -198,11 +213,15 @@ form#ingredient {
     top: 5px;
 }
 
+#keyword {
+    margin-bottom: 0px;
+}
+
 #resultsRow {
     /* width: 400px; */
     margin: 0 auto;
     margin-top: 15px;
-    background-color: white;
+    background-color: transparent;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 25px;
@@ -211,42 +230,62 @@ form#ingredient {
     margin-bottom: 25px;
 }
 
-#movieParaCol, #foodParaCol {
+#movieParaCol,
+#foodParaCol {
     background-image: url(../images/qbkls.png);
     filter: drop-shadow(1px 5px 10px #000000ab);
     padding: 15px;
 }
 
+#movieResultCol, #foodResultCol {
+    
+}
+
+#recipeResults, #movieResult {
+    background-color: skyblue;
+    filter: drop-shadow(1px 5px 10px #000000ab);
+    padding: 15px;
+}
+
 #triangle-topleft {
-  width: 0;
-  height: 0;
-  border-top: 100px solid gray;
-  border-right: 100px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 100px solid gray;
+    border-right: 100px solid transparent;
 }
 
 
 /****************************/
+
 /*Materialize Custom Styling*/
+
 /****************************/
 
 .btn-floating.btn-large {
-/*    margin-left: 45%;*/
-/*    margin-right: 50%;*/
-    
+    /*    margin-left: 45%;*/
+    /*    margin-right: 50%;*/
     height: 100px;
     width: 100px;
-/*    position: relative;*/
-/*
-    bottom: 180px;
-    right: 15px;
-*/
-/*    bottom: 125px;*/
+    position: relative;
+    bottom: 300px;
+    right: 78px;
+    /*    margin-left: 50%;*/
 }
 
 .btn-floating.btn-large i {
     line-height: 99px;
+    filter: drop-shadow(1px 2px 1px #000000ab);
 }
 
 .btn-large i {
     font-size: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+.row .col.s1 {
+
+    position: relative;
+    bottom: 375px;
+    right: -230px;
+}
 }

@@ -38,10 +38,11 @@
     <div class="row" id="parametersRow">
         <div class="col s1 m1 l1"></div>
 
-        <div class="col s11 m4 l4" id="movieParaCol">
-            <div class="row">
-                <div class="col s12 m6 l12" id="">
-
+        <div class="col s11 m5 l5" id="movieParaCol">
+            
+            <div class="row" id="keyword">
+                <div class="col s12 m12 l12" id="">
+                    <h5>Recipe Parameters</h5>
                     <form class="col s12" id="ingredient">
                         <div class="input-field col s12">
                             <input type="text" id="foodKeyword">
@@ -52,25 +53,14 @@
                 </div>
             </div>
 
-            <div class="col s4 m6 l4" id="">
+            <div class="col s4 m4 l4" id="">
 
                 <form id="ingredientNumber">
+                    <h6>Max Ingredients</h6>
                     <p>
                         <label>
-        <input name="ingr" type="radio" id="four" value="4" checked />
-        <span>4</span>
-      </label>
-                    </p>
-                    <p>
-                        <label>
-        <input name="ingr" type="radio" id="five" value="5"/>
+        <input name="ingr" type="radio" id="five" value="5" checked />
         <span>5</span>
-      </label>
-                    </p>
-                    <p>
-                        <label>
-        <input name="ingr" type="radio" id="six" value="6"/>
-        <span>6</span>
       </label>
                     </p>
                     <p>
@@ -79,11 +69,24 @@
         <span>7</span>
       </label>
                     </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="nine" value="9"/>
+        <span>9</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="eleven" value="11"/>
+        <span>11</span>
+      </label>
+                    </p>
                 </form>
             </div>
 
-            <div class="col s4 m6 l4" id="">
+            <div class="col s4 m4 l4" id="">
                 <form id="cookTime">
+                    <h6>Time Limit</h6>
                     <p>
                         <label>
         <input name="time" type="radio" id="1%2B" value="1%2B" checked />
@@ -111,30 +114,35 @@
                 </form>
             </div>
 
-            <div class="col s4 m6 l4" id="">
+            <div class="col s4 m4 l4" id="">
                 <form id="healthExclusions">
-                    <input name="health" type="radio" id="null" value="#" checked />
+                    
+                    <h6>Diet Restrictions</h6>
                     <p>
                         <label>
-        <input name="health" type="radio" id="&health=sugar-conscious" value="&health=sugar-conscious" />
+        <input name="health" type="checkbox" id="" value="#" checked />
+        <span>None</span>
+<!--
+        <input name="health" type="checkbox" id="&health=sugar-conscious" value="&health=sugar-conscious" />
         <span>Low Sugar</span>
+-->
       </label>
                     </p>
                     <p>
                         <label>
-        <input name="health" type="radio" id="&health=peanut-free" value="&health=peanut-free" />
+        <input name="health" type="checkbox" id="&health=peanut-free" value="&health=peanut-free" />
         <span>Peanuts</span>
       </label>
                     </p>
                     <p>
                         <label>
-        <input name="health" type="radio" id="&health=soy-free" value="&health=soy-free" />
+        <input name="health" type="checkbox" id="&health=soy-free" value="&health=soy-free" />
         <span>Soy</span>
       </label>
                     </p>
                     <p>
                         <label>
-        <input name="health" type="radio" id="&health=shellfish-free" value="&health=shellfish-free" />
+        <input name="health" type="checkbox" id="&health=shellfish-free" value="&health=shellfish-free" />
         <span>Shellfish</span>
       </label>
                     </p>
@@ -143,26 +151,30 @@
             </div>
         </div>
 
-       
-       
-        <div class="col s0 m2 l2" id="randomButton"><div class="col m12"><button class="btn-floating btn-large cyan pulse" type="submit" name="action" id="submit"><i class="material-icons">cached</i></button></div></div>
 
-       
-       
-        <div class="col s11 m4 l4" id="foodParaCol">
+
+        <div class="col s1 m2 l2" id="randomButton">
+            <div class="col m12"><button class="btn-floating btn-large cyan pulse" type="submit" name="action" id="submit"><i class="material-icons">cached</i></button></div>
+        </div>
+
+
+
+        <div class="col s11 m3 l3" id="foodParaCol">
 
             <div class="col s12 m12 l12" id="">
-        <form id="sortedBy">
+                <h5>Movie Type</h5>
+                <hr>
+                <form id="sortedBy">
                     <p>
                         <label>
         <input name="ingr" type="radio" id="vote_average.desc" value="vote_average.desc" checked />
-        <span>Voter Rating</span>
+        <span>Acclaimed</span>
       </label>
                     </p>
                     <p>
                         <label>
         <input name="ingr" type="radio" id="popularity.desc" value="popularity.desc"/>
-        <span>Popularity</span>
+        <span>Popular</span>
       </label>
                     </p>
                     <p>
@@ -181,7 +193,7 @@
             </div>
 
             <div class="col s12 m12 l12" id="">
-            
+
             </div>
 
 
@@ -191,14 +203,16 @@
 
 
     <div class="row" id="resultsRow">
-        <div class="col s12 m6 l5 animated fadeIn" id="movieResultCol">
+       <div class="col s1 m1 l1"></div>
+        <div class="col s12 m5 l5 animated fadeIn" id="movieResultCol">
             <div class="zoom" id="recipeResults"></div>
         </div>
-        <div class="col s1 m0 l2">
+        <div class="col s1 m1 l2">
         </div>
-        <div class="col s12 m6 l5 animated fadeIn" id="foodResultCol">
+        <div class="col s12 m4 l3 animated fadeIn" id="foodResultCol">
             <div class="zoom" id="movieResult"></div>
         </div>
+        <div class="col s1 m1 l1"></div>
     </div>
 
 
@@ -215,6 +229,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+
+
     </script>
     <script src="./assets/js/script.js"></script>
 
