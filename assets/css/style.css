@@ -188,6 +188,10 @@ span#head2 {
 
 span#head3 {}
 
+.bounceInDown {
+    animation-delay: 3s;
+}
+
 /*
 .zoom {
      padding-bottom: 50px; 
@@ -215,6 +219,10 @@ div#results {
 form#ingredient {
     position: relative;
     top: 5px;
+}
+
+#recipeH5 {
+    margin-left: 10px;
 }
 
 #keyword {
@@ -259,6 +267,42 @@ form#ingredient {
 }
 
 
+.polling_message {
+    color: white;
+    margin-right: 2%;  
+    padding: 15px;          
+  }
+  
+  .view_port {
+/*    background-color: black;*/
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    bottom: 300px;
+    right: 348px;
+    transform: rotate(-83deg);
+    z-index: -1;
+}
+  }
+  
+  .cylon_eye {
+    background-color: #01bcd4;
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, .9) 25%,
+        rgba(0, 0, 0, .1) 50%,
+        rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 200%;
+  
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+            animation: 4s linear 0s infinite alternate move_eye;
+  }
+  
+    @-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+    @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
 /****************************/
 
 /*Materialize Custom Styling*/
@@ -277,7 +321,7 @@ form#ingredient {
 }
 
 .btn-floating.btn-large i {
-    line-height: 99px;
+    line-height: 100px;
     filter: drop-shadow(1px 2px 1px #000000ab);
 }
 

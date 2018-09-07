@@ -42,11 +42,11 @@
             
             <div class="row" id="keyword">
                 <div class="col s12 m12 l12" id="">
-                    <h5>Recipe Parameters</h5>
+                    <h5 id="recipeH5">Recipe Parameters</h5>
                     <form class="col s12" id="ingredient">
                         <div class="input-field col s12">
                             <input type="text" id="foodKeyword">
-                            <label for="foodKeyword">List any desired ingredients (separate by commas)</label>
+                            <label for="foodKeyword">Keywords or Ingredients (separate by commas)</label>
                             <!--(*Required?)-->
                         </div>
                     </form>
@@ -151,10 +151,17 @@
             </div>
         </div>
 
-
-
+       
         <div class="col s1 m2 l2" id="randomButton">
+           <h3 class="animated bounceInDown">
             <div class="col m12"><button class="btn-floating btn-large cyan pulse" type="submit" name="action" id="submit"><i class="material-icons">cached</i></button></div>
+            </h3>
+<!--
+            <div class="view_port">
+                <div class="polling_message"></div>
+                <div class="cylon_eye"></div>
+              </div>
+-->
         </div>
 
 
@@ -162,9 +169,11 @@
         <div class="col s11 m3 l3" id="foodParaCol">
 
             <div class="col s12 m12 l12" id="">
-                <h5>Movie Type</h5>
+                <h5>Movie Parameters</h5>
                 <hr>
+            <div class="col s12 m6 l6" id="">
                 <form id="sortedBy">
+                   <h6>Sort By</h6>
                     <p>
                         <label>
         <input name="ingr" type="radio" id="vote_average.desc" value="vote_average.desc" checked />
@@ -190,6 +199,24 @@
       </label>
                     </p>
                 </form>
+            </div>
+            <div class="col s12 m6 l6" id="">
+             <form id="withGenre">
+              <h6>Genre</h6>
+              <p>
+               <select class="browser-default" id="dropDown">
+                <option value="#" disabled selected>All</option>
+                <option value="&with_genres=28" id="action">Action</option>
+                <option value="&with_genres=16" id="animation">Animation</option>
+                <option value="&with_genres=35" id="comedy">Comedy</option>
+                <option value="&with_genres=99" id="documentary">Documentary</option>
+                <option value="&with_genres=18" id="drama">Drama</option>
+                <option value="&with_genres=27" id="horror">Horror</option>
+                <option value="&with_genres=878" id="sci-fi">Sci-fi</option>
+            </select>
+               </p>
+               </form>
+                </div>
             </div>
 
             <div class="col s12 m12 l12" id="">

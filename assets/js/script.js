@@ -62,8 +62,9 @@ $(document).ready(function () {
 
 
 
+        var filmGenre = $("#withGenre option:selected").val();
         var sortBy = $("#sortedBy input:checked").val();
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=af5bef9fa0d9daa3815142e331d7fa37&language=en-US&include_adult=false&include_video=false&vote_count.gte=500" + "&sort_by=" + sortBy;
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=af5bef9fa0d9daa3815142e331d7fa37&language=en-US&include_adult=false&include_video=false&vote_count.gte=500" + "&sort_by=" + sortBy + filmGenre;
         console.log(queryURL);
         //        console.log(sortBy);
 
