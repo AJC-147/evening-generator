@@ -9,22 +9,20 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css" media="screen,projection" />
 
-    <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
 
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
 
 </head>
 
 <body>
-<!--
-    <div class="row" id="secondBG">
-        <div class="col m12" id="secondBackground">
--->
 
     <div class="row" id="headerRow">
         <div class="col s12">
@@ -34,190 +32,178 @@
         </div>
     </div>
 
+
+
+
     <div class="row" id="parametersRow">
-       <div class="col s1 m1 l1"></div>
-       
+        <div class="col s1 m1 l1"></div>
+
         <div class="col s11 m4 l4" id="movieParaCol">
-        
-            <div class="col s12 m6 l12" id="">
-            <input type="text" id="foodKeyword">
-<!--(*Required?)-->
+            <div class="row">
+                <div class="col s12 m6 l12" id="">
+
+                    <form class="col s12" id="ingredient">
+                        <div class="input-field col s12">
+                            <input type="text" id="foodKeyword">
+                            <label for="foodKeyword">List any desired ingredients (separate by commas)</label>
+                            <!--(*Required?)-->
+                        </div>
+                    </form>
+                </div>
             </div>
-            
+
             <div class="col s4 m6 l4" id="">
-            <form id="ingredientNumber">
-    <p>
-        <label>
-        <input name="ingredientNumber" id="4" value="4" type="radio" checked />
+
+                <form id="ingredientNumber">
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="four" value="4" checked />
         <span>4</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="five" value="5"/>
         <span>5</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="six" value="6"/>
         <span>6</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="seven" value="7"/>
         <span>7</span>
       </label>
-    </p>
-           </form>
+                    </p>
+                </form>
             </div>
-            
+
             <div class="col s4 m6 l4" id="">
-            <form>
-    <p>
-        <label>
-        <input name="group1" type="radio" checked />
-        <span>5-15</span>
+                <form id="cookTime">
+                    <p>
+                        <label>
+        <input name="time" type="radio" id="1%2B" value="1%2B" checked />
+        <span>No Limit</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
-        <span>16-25</span>
+                    </p>
+                    <p>
+                        <label>
+        <input name="time" type="radio" id="0-15" value="0-15" />
+        <span>1-15</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
-        <span>26-35</span>
+                    </p>
+                    <p>
+                        <label>
+        <input name="time" type="radio" id="15-30" value="15-30" />
+        <span>15-30</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
-        <span>36-45</span>
+                    </p>
+                    <p>
+                        <label>
+        <input name="time" type="radio" id="30-45" value="30-45" />
+        <span>30-45</span>
       </label>
-    </p>
-           </form>
+                    </p>
+                </form>
             </div>
-            
+
             <div class="col s4 m6 l4" id="">
-            <form>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
-        <span>Nuts</span>
+                <form id="healthExclusions">
+                    <input name="health" type="radio" id="null" value="#" checked />
+                    <p>
+                        <label>
+        <input name="health" type="radio" id="&health=sugar-conscious" value="&health=sugar-conscious" />
+        <span>Low Sugar</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
+                    </p>
+                    <p>
+                        <label>
+        <input name="health" type="radio" id="&health=peanut-free" value="&health=peanut-free" />
+        <span>Peanuts</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="health" type="radio" id="&health=soy-free" value="&health=soy-free" />
         <span>Soy</span>
       </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
-        <span>Fish</span>
-      </label>
-    </p>
-    <p>
-        <label>
-        <input name="group1" type="radio" />
+                    </p>
+                    <p>
+                        <label>
+        <input name="health" type="radio" id="&health=shellfish-free" value="&health=shellfish-free" />
         <span>Shellfish</span>
       </label>
-    </p>
-           </form>
-            </div>
-        </div>
-        
-        <div class="col s0 m2 l2"></div>
-        
-        <div class="col s11 m4 l4" id="foodParaCol">
-        
-            <div class="col s12 m6 l3" id="">
+                    </p>
+                </form>
 
             </div>
-            
-            <div class="col s12 m6 l3" id="">
+        </div>
+
+       
+       
+        <div class="col s0 m2 l2" id="randomButton"><div class="col m12"><button class="btn-floating btn-large cyan pulse" type="submit" name="action" id="submit"><i class="material-icons">cached</i></button></div></div>
+
+       
+       
+        <div class="col s11 m4 l4" id="foodParaCol">
+
+            <div class="col s12 m12 l12" id="">
+        <form id="sortedBy">
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="vote_average.desc" value="vote_average.desc" checked />
+        <span>Voter Rating</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="popularity.desc" value="popularity.desc"/>
+        <span>Popularity</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="release_date.desc" value="release_date.desc"/>
+        <span>Newest</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="ingr" type="radio" id="release_date.asc" value="release_date.asc"/>
+        <span>Oldest</span>
+      </label>
+                    </p>
+                </form>
             </div>
+
+            <div class="col s12 m12 l12" id="">
             
-            <div class="col s12 m6 l3" id="">
             </div>
-            
-            <div class="col s12 m6 l3" id="">
-            </div>
+
 
         </div>
         <div class="col s1 m1 l1"></div>
     </div>
 
-    <div class="row" id="resultsRow">
-        <div class="col s12 m6 l5" id="movieResultCol">
 
+    <div class="row" id="resultsRow">
+        <div class="col s12 m6 l5 animated fadeIn" id="movieResultCol">
+            <div class="zoom" id="recipeResults"></div>
         </div>
         <div class="col s1 m0 l2">
         </div>
-        <div class="col s12 m6 l5" id="foodResultCol">
-
+        <div class="col s12 m6 l5 animated fadeIn" id="foodResultCol">
+            <div class="zoom" id="movieResult"></div>
         </div>
     </div>
 
-<!--Delete Below-->
-
-    <div class="row center animated fadeIn delay-10s" id="selectionDiv">
-        <div class="col m4"></div>
-
-        <div class="col m4">
-
-
-            <select class="browser-default" id="foodGenre">
-                <option value="" disabled selected>Choose your food genre</option>
-                <option value="1" id="italian">Italian</option>
-                <option value="2" id="chinese">Chinese</option>
-                <option value="3" id="french">French</option>
-                <option value="4" id="american">American</option>
-                <option value="5" id="indian">Indian</option>
-            </select>
-
-            <select class="browser-default" id="ingredientNumb">
-                <option value="" disabled selected>Pick your ingredient limit</option>
-                <option value="1" id="4">4</option>
-                <option value="2" id="5">5</option>
-                <option value="3" id="6">6</option>
-                <option value="4" id="7">7</option>
-                <option value="5" id="8">8</option>
-            </select>
-            <!--
-
-           <a class="waves-effect waves-light btn" attr="4" id="ingredientNumb" value="4">4</a>
--->
-
-            <button class="btn waves-effect black text-white submit" type="submit" name="action" id="submit">Submit
-                <i class="material-icons right">send</i>
-            </button>
 
 
 
-        </div>
-        <div class="col m4"></div>
-    </div>
-
-    <!-- results area -->
-    <div class="row center">
-        <div class="col m4"></div>
-        <div class="col m4 animated fadeIn delay-10s" id="results">
-            <i class="medium material-icons">local_dining</i>
-            <div class="zoom" id="recipe"></div>
-            <br>
-            <hr>
-            <br>
-            <i class="medium material-icons">movie</i>
-            <div id="movieResult"></div>
-        </div>
-        <div class="col m4"></div>
-    </div>
 
     <!--
 <div id="container">
@@ -226,17 +212,12 @@
 -->
 
 
-    <!-- javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
-    <!--    <script src="./assets/js/fandango.js"></script>-->
-    
-    
 
-<!--
-</div>
-</div>
--->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

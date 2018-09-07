@@ -1,34 +1,11 @@
-h1 {
-    font-family: 'Work Sans', sans-serif;
-    color: #fff;
-    filter: drop-shadow(1px 5px 10px #000000ab);
-    padding-top: 75px;
-    font-size: 6.2em;
--webkit-transition: padding-top, font-size .5s;
-   -moz-transition: padding-top, font-size .5s;
-     -o-transition: padding-top, font-size .5s;
-        transition: padding-top, font-size .5s;
-}
-
-@media only screen and (max-width: 1705px) {
-    h1 {
-    font-family: 'Work Sans', sans-serif;
-    color: #fff;
-    filter: drop-shadow(1px 5px 10px #000000ab);
-    padding-top: 125px;
-    font-size: 4.2em;
-    
-/*
-    background: black;
-    padding-bottom: 5px;
-*/
-}
-}
+/**********************/
+/*Basic Custom Styling*/
+/**********************/
 
 body {
     margin: 0 auto;
 /*    background-color: #26a69a;*/
-    background: url(../images/ITALIAN-INGREDIENTS-1.jpg) no-repeat center center fixed;
+    background: url(../images/split1.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -89,6 +66,70 @@ body:before {
 }
 */
 
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    filter: drop-shadow(1px 5px 10px #000000ab);
+    padding-top: 75px;
+    font-size: 6.2em;
+-webkit-transition: padding-top, font-size .5s;
+   -moz-transition: padding-top, font-size .5s;
+     -o-transition: padding-top, font-size .5s;
+        transition: padding-top, font-size .5s;
+}
+
+@media only screen and (max-width: 1705px) {
+    h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    filter: drop-shadow(1px 5px 10px #000000ab);
+    padding-top: 125px;
+    font-size: 4.2em;
+    
+/*
+    background: black;
+    padding-bottom: 5px;
+*/
+}
+}
+
+h2 {}
+
+h3, h4, h5, h6, p, button, input, optgroup, select, textarea {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+a {}
+
+img {
+    width: 300px;
+    margin: 0 auto;
+}
+
+form {}
+
+input {}
+
+select {
+    margin: 5px;
+}
+
+
+/*************************/
+/*Advanced Custom Styling*/
+/*************************/
+
+#null {
+    display: none;
+}
+
+#container {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+}
+
 div#header {
     padding-top: 60px;
 /*
@@ -126,27 +167,38 @@ span#head2 {
     animation-delay: 2s;
 }
 
-span#head3 {
-}
+span#head3 {}
 
+/*
 .zoom {
-    /* padding-bottom: 50px; */
-    /* background-color: green; */
+     padding-bottom: 50px; 
+     background-color: green; 
     transition: transform .2s;
     width: 300px;
-    /* height: 300px; */
+     height: 300px; 
     margin: 0 auto;
     opacity: 0.85;
 }
 
 .zoom:hover {
-    -ms-transform: scale(1.05); /* IE 9 */
-    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
     transform: scale(1.05); 
     opacity: 0.85;
 }
+*/
 
-#results {
+div#results {
+    background-image: url(../images/qbkls.png);
+    filter: drop-shadow(1px 5px 10px #000000ab);
+}
+
+form#ingredient {
+    position: relative;
+    top: 5px;
+}
+
+#resultsRow {
     /* width: 400px; */
     margin: 0 auto;
     margin-top: 15px;
@@ -159,31 +211,10 @@ span#head3 {
     margin-bottom: 25px;
 }
 
-img {
-    width: 300px;
-    margin: 0 auto;
-}
-
-
 #movieParaCol, #foodParaCol {
     background-image: url(../images/qbkls.png);
     filter: drop-shadow(1px 5px 10px #000000ab);
-}
-
-div#results {
-    background-image: url(../images/qbkls.png);
-    filter: drop-shadow(1px 5px 10px #000000ab);
-}
-
-select {
-    margin: 5px;
-}
-
-#container {
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  background-image: url(http://www.webdesign.org/img_articles/14881/site-background-pattern-07.jpg);
+    padding: 15px;
 }
 
 #triangle-topleft {
@@ -191,4 +222,31 @@ select {
   height: 0;
   border-top: 100px solid gray;
   border-right: 100px solid transparent;
+}
+
+
+/****************************/
+/*Materialize Custom Styling*/
+/****************************/
+
+.btn-floating.btn-large {
+/*    margin-left: 45%;*/
+/*    margin-right: 50%;*/
+    
+    height: 100px;
+    width: 100px;
+/*    position: relative;*/
+/*
+    bottom: 180px;
+    right: 15px;
+*/
+/*    bottom: 125px;*/
+}
+
+.btn-floating.btn-large i {
+    line-height: 99px;
+}
+
+.btn-large i {
+    font-size: 4rem;
 }
